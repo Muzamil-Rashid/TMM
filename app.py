@@ -18,21 +18,19 @@ def get_paragraph():
     try:
         response = requests.get(url, timeout=5)
         response.raise_for_status()
-        paragraphs = [p.strip() for p in response.text.split("\n\n") if p.strip()]
-    
-
-            
-            if not paragraphs:
-                return jsonify({"error": "No paragraphs available"}), 500
-            
-            return jsonify({
-                "paragraph": random.choice(paragraphs)
+        paragraphs = [p.strip() for p in response.text.split("\n\n") if p.strip()] 
+        if not paragraphs:
+            return jsonify({"error": "No paragraphs available"}), 500
+        
+        return jsonify({
+            "paragraph": random.choice(paragraphs)
         })
     except requests.exceptions.RequestException as e:
         return jsonify({"error": f"Failed to fetch paragraphs: {str(e)}"}), 500
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
