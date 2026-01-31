@@ -18,14 +18,10 @@ def home():
 @app.route("/paragraph")
 def get_paragraph():
     try:
-        response = requests.get(PARAGRAPHS_URL, timeout=5)
+        response = requests.get(PARAGRAPHS_URL)
         response.raise_for_status()
         
         paragraphs = [p.strip() for p in response.text.split("\n\n") if p.strip()]
-        
-        if not paragraphs:
-            return jsonify({"error": "No paragraphs available"}), 500
-        
         return jsonify({
             "paragraph": random.choice(paragraphs)
         })
@@ -34,6 +30,7 @@ def get_paragraph():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
