@@ -8,21 +8,33 @@ CORS(app)
 
 @app.route("/paragraph", methods=["GET"])
 def get_paragraph():
-    file_path = os.path.join(os.path.dirname(__file__), "paragraphs.txt")
+    try:
+        # 1. File path check karein
+        file_path = "paragraphs.txt"
+        
+        if not os.path.exists(file_path):
+            return jsonify({"error": "File paragraphs.txt not found!"}), 404
 
-    with open(file_path, "r", encoding="utf-8") as f:
-        text = f.read()
+        # 2. File read karke har line ko list ka element banana
+        with open(file_path, "r", encoding="utf-8") as f:
+            # .read().splitlines() se ye auto-list ban jayegi
+            paragraphs = f.read().splitlines()
 
-    # Split paragraphs by blank line
-    paragraphs = [p.strip() for p in text.split("\n\n") if p.strip()]
+        # 3. Khali items remove karna (clean list)
+        paragraphs = [p.strip() for p in paragraphs if p.strip()]
 
-    return jsonify({
-        "paragraph": random.choice(paragraphs)
-    })
+        if not paragraphs:
+            return jsonify({"error": "File is empty!"}), 404
 
-@app.route("/")
-def home():
-    return "KeyMaster Backend Running"
+        # 4. RANDOM paragraph pick karna
+        selected_paragraph = random.choice(paragraphs)
+
+        return jsonify({
+            "paragraph": selected_paragraph
+        })
+
+    except Exception as e:
+        return jsonify({"error": f"Internal Server Error: {str(e)}"}), 500
 
 if __name__ == "__main__":
     app.run()
