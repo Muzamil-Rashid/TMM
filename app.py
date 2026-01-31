@@ -3,6 +3,7 @@ import random
 import requests
 
 app = Flask(__name__)
+CORS(app)
 
 # Home route (already working)
 @app.route("/")
@@ -13,16 +14,22 @@ def home():
 @app.route("/paragraph", methods=["GET"])
 def get_paragraph():
     url = "https://raw.githubusercontent.com/Muzamil-Rashid/TMM/refs/heads/main/paragraphs.txt"
-    
-    response = requests.get(url)
-    paragraphs = response.text.split(",")
-
-    selected = random.choice(paragraphs).strip()
-
-    return jsonify({
-        "paragraph": selected
-    })
+    try:
+        response = requests.get(url, timeout=5)
+        response.raise_for_status()
+            
+            paragraphs = [p.strip() for p in response.text.split(",") if p.strip()]
+            
+            if not paragraphs:
+                return jsonify({"error": "No paragraphs available"}), 500
+            
+            return jsonify({
+                "paragraph": random.choice(paragraphs)
+        })
+    except requests.exceptions.RequestException as e:
+        return jsonify({"error": f"Failed to fetch paragraphs: {str(e)}"}), 500
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
+
 
