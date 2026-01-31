@@ -11,7 +11,7 @@ def home():
     return "Typing Speed Test Backend Running"
 
 # Paragraph API route (THIS WAS MISSING)
-@app.route("/paragraph", methods=["GET"])
+@app.route("/get-paragraph", methods=["GET"])
 def get_paragraph():
     url = "https://raw.githubusercontent.com/Muzamil-Rashid/TMM/refs/heads/main/paragraphs.txt"
     try:
@@ -31,5 +31,6 @@ def get_paragraph():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
