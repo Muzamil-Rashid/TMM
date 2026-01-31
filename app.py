@@ -11,7 +11,7 @@ def get_paragraph():
         content = f.read()
 
     # 🔹 split by empty line = paragraphs
-    paragraphs = [p.strip() for p in content.split("\n\n") if p.strip()]
+    paragraphs = [p.strip() for p in content.split("\n\n\n\n") if p.strip()]
 
     # 🔹 return ONE random paragraph
     return jsonify({
@@ -20,6 +20,7 @@ def get_paragraph():
 
 if __name__ == "__main__":
     app.run()
+
 
 
 
