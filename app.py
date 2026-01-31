@@ -21,7 +21,7 @@ def get_paragraph():
         response = requests.get(PARAGRAPHS_URL, timeout=5)
         response.raise_for_status()
         
-        paragraphs = [p.strip() for p in response.text.split("\n\n") if p.strip()]
+        paragraphs = [p.strip() for p in response.text.split(",") if p.strip()]
         
         if not paragraphs:
             return jsonify({"error": "No paragraphs available"}), 500
@@ -34,3 +34,4 @@ def get_paragraph():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
