@@ -1,4 +1,4 @@
-Typing is a skill that improves with consistent practice and focused effort over time.
+{Typing is a skill that improves with consistent practice and focused effort over time.}
 
 Learning to type accurately is more important than typing fast in the beginning.
 
@@ -89,3 +89,4 @@ Small mistakes in data files can break entire applications.
 Understanding data flow is key to full stack development.
 
 Consistency and patience are essential in software learning.
+
