@@ -12,7 +12,7 @@ def home():
 # Paragraph API route (THIS WAS MISSING)
 @app.route("/paragraph", methods=["GET"])
 def get_paragraph():
-    url = "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/paragraphs.txt"
+    url = "https://raw.githubusercontent.com/Muzamil-Rashid/TMM/refs/heads/main/paragraphs.txt"
     
     response = requests.get(url)
     paragraphs = response.text.split(",")
@@ -25,3 +25,4 @@ def get_paragraph():
 
 if __name__ == "__main__":
     app.run()
+
