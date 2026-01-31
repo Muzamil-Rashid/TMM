@@ -1,0 +1,91 @@
+Typing is a skill that improves with consistent practice and focused effort over time.
+
+Learning to type accurately is more important than typing fast in the beginning.
+
+A good typing test helps users measure speed, accuracy, and consistency together.
+
+Programming students benefit greatly from strong typing skills in daily coding.
+
+Practicing typing daily for even ten minutes can create noticeable improvement.
+
+Accuracy matters more than speed because mistakes slow you down overall.
+
+A clean user interface helps users focus better during typing practice.
+
+Flask is a lightweight Python framework suitable for small backend services.
+
+Frontend and backend must communicate properly using clean API responses.
+
+Random paragraphs keep typing practice interesting and less repetitive.
+
+GitHub is commonly used to store project source code and data files.
+
+Vercel is a popular platform for hosting frontend applications.
+
+Render is suitable for deploying Flask backend applications easily.
+
+Separating paragraphs with blank lines helps backend parsing logic.
+
+Each typing session should load only one paragraph at a time.
+
+Loading too much text at once can confuse the user experience.
+
+A typing app should highlight correct and incorrect characters clearly.
+
+Measuring words per minute requires accurate time tracking.
+
+Accuracy percentage reflects how carefully the user types.
+
+Restarting the test should load a fresh paragraph every time.
+
+Well-structured data files reduce chances of runtime errors.
+
+Backend logic should never send unnecessary data to frontend.
+
+APIs should always return minimal and meaningful responses.
+
+Using JSON format ensures easy data handling in JavaScript.
+
+Frontend JavaScript should never modify backend data directly.
+
+Cross-origin requests must be allowed for hosted applications.
+
+Random selection prevents memorization of typing content.
+
+A good typing test feels smooth and responsive.
+
+Clean code reduces debugging time during deployment.
+
+Hosting issues are often mistaken for logic errors.
+
+File formatting mistakes cause most paragraph loading bugs.
+
+Blank lines play a critical role in text splitting logic.
+
+Render logs help identify backend deployment errors quickly.
+
+Vercel console helps debug frontend fetch problems.
+
+Using UTF-8 encoding prevents text reading issues.
+
+Consistent indentation avoids Python runtime errors.
+
+Testing APIs directly in the browser is always recommended.
+
+Frontend should trust backend responses only after validation.
+
+Each paragraph should be readable and moderately sized.
+
+Typing applications are great projects for learning full stack.
+
+Practice projects help students understand real deployment flow.
+
+Learning debugging is as important as writing code.
+
+Once logic is correct, hosting becomes straightforward.
+
+Small mistakes in data files can break entire applications.
+
+Understanding data flow is key to full stack development.
+
+Consistency and patience are essential in software learning.
