@@ -1,4 +1,5 @@
 from flask import Flask, jsonify
+from flask_cors import CORS
 import random
 import requests
 
@@ -31,6 +32,7 @@ def get_paragraph():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
